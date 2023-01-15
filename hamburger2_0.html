@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" class="hamburger-icon">
+      <title>Menu</title>
+      <circle cx="12" cy="12" r="3"></circle>
+      <circle cx="24" cy="12" r="3"></circle>
+      <circle cx="36" cy="12" r="3"></circle>
+      <circle cx="36" cy="24" r="3"></circle>
+      <circle cx="36" cy="36" r="3"></circle>
+      <circle cx="24" cy="36" r="3"></circle>
+      <circle cx="12" cy="36" r="3"></circle>
+      <circle cx="12" cy="24" r="3"></circle>
+      <rect width="6" x="21" y="21" height="6" rx="3" ry="3"></rect>
+      <rect width="6" x="21" y="21" height="6" rx="3" ry="3"></rect>
+    </svg>
+  </body>
+  <style media="screen">
+
+    .hamburger-icon {
+      stroke: black;
+      stroke-width: 2px;
+      fill: none;
+    }
+
+    .hamburger-icon * {
+      transition: all ease 0.3s;
+    }
+
+    .hamburger-icon:hover circle:nth-of-type(2) {
+      transform: translateY(-24px);
+      opacity: 0;
+    }
+
+    .hamburger-icon:hover circle:nth-of-type(6) {
+      transform: translateY(24px);
+      opacity: 0;
+    }
+
+    .hamburger-icon:hover circle:nth-of-type(4) {
+      transform: translateX(24px);
+      opacity: 0;
+    }
+
+    .hamburger-icon:hover circle:nth-of-type(8) {
+      transform: translateX(-24px);
+      opacity: 0;
+    }
+
+    .hamburger-icon:hover rect:nth-of-type(1) {
+      height: 30px;
+      transform: translateY(-12px);
+    }
+
+    .hamburger-icon:hover rect:nth-of-type(2) {
+      width: 30px;
+      transform: translateX(-12px);
+    }
+  </style>
+</html>
