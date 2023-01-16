@@ -48,6 +48,7 @@ main {
 
 p {
   line-height: 1.7rem;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1050px) {
@@ -59,8 +60,13 @@ p {
 section h5 {
   margin-top: 10px;
   line-height: 1.55;
-  font-weight: 400;
   font-size: 1rem;
+  font-weight: 600;
+  color: var(--c7);
+}
+
+strong {
+  font-weight: 600;
 }
 
 h2 {
@@ -79,7 +85,6 @@ h2 {
   position: absolute;
   top: 4rem;
   background: var(--c0);
-  padding: 1rem;
   left: 100vw;
   width: 100%;
   display: flex;
@@ -188,10 +193,13 @@ label span {
   transform: translateX(-17px);
 }
 
+.demo-button span {
+  margin-right: 20px;
+  display: inline-block;
+}
+
 .nav a, .demo-button a, button {
   color: var(--c7);
-  padding: 2px 5px;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -199,13 +207,23 @@ label span {
   font-size: 0.8rem;
 }
 
-/* .nav a:hover, .demo-button a:hover, button:hover {
-  background: var(--c3);
-} */
+.nav a:hover + .underline, 
+.demo-button a:hover + .underline, 
+button:hover + .underline {
+  width: 100%;
+}
 
-.nav a[state=active] {
-  color: var(--c3);
-  background: var(--c10);
+.underline {
+  width: 0px;
+  height: 2px;
+  background: var(--c7);
+  transition: width 0.3s ease;
+  margin-top: 5px;
+}
+
+.nav a[state=active] + .underline {
+  opacity: 1;
+  width: 100%;
 }
 
 nav label {
@@ -419,7 +437,7 @@ h1 {
   z-index: 1;
 }
 
-.nav-wrapper {
+.nav-wrapper, .wrapper {
   padding: 0 20px;
 }
 
@@ -576,10 +594,6 @@ animated-text, .logo {
   }
 }
 
-.demo-button a {
-  co
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
     --c10: var(--white);
@@ -663,7 +677,7 @@ textarea {
   background: var(--c0);
   color: var(--c10);
   padding: 25px 0 5px;
-  box-shadow: 0 2px var(--c3);
+  box-shadow: 0 2px var(--c7);
   transition: box-shadow 0.3s ease;
 }
 
@@ -675,10 +689,6 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* .field:hover > input, .field:hover > textarea {
-  box-shadow: 0 2px var(--c7);
-} */
-
 .field input:not(:placeholder-shown) + label,
 .field textarea:not(:placeholder-shown) + label,
 .field input:focus + label,
@@ -687,14 +697,6 @@ textarea {
   font-size: 0.7rem;
   transform: translateY(-10px);
   color: var(--c7);
-}
-
-.field input:not(:placeholder-shown),
-.field textarea:not(:placeholder-shown),
-.field input:focus,
-.field textarea:focus
-{
-  box-shadow: 0 2px var(--c7);
 }
 
 form button {
@@ -763,14 +765,15 @@ form button {
   height: 4.5rem;
 }
 
-/* @media (min-width: 768px) {
-  main {
-    width: 100%;
-  }
+footer {
+  width: 100%;
+  background: var(--c7);
 }
 
-@media (min-width: 1024px) {
-  main {
-    width: 100%;
-  }
-} */
+footer p {
+  width: 100%;
+  color: var(--c0);
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 0.8rem;
+}

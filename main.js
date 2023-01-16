@@ -66,6 +66,13 @@ const cursorDot =document.querySelector('.cursor-dot')
     })
   })
 
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { 
+    cursor.style.display = "none"
+    cursorDot.style.display = "none"
+  }
+
+  document.querySelector('footer p').innerHTML = "© " + new Date().getFullYear() + " | Designed and built by David Abari"
+
 
 
 })
