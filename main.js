@@ -13,6 +13,7 @@ $(function() {
 
       if (section.offsetTop <= topOffset && section.offsetTop + section.offsetHeight > topOffset) {
         link.setAttribute('state', 'active')
+        document.title = `${link.innerText} | David Abari`
       } else {
         link.setAttribute('state', 'inactive')
       }
