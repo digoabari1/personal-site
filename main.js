@@ -7,18 +7,15 @@ $(function() {
 
   window.addEventListener('scroll', e => {
     let topOffset = window.scrollY + 25
-
-    navLinks.forEach(link => {
+    for (let link of navLinks) {
       let section = document.querySelector(link.hash)
-
       if (section.offsetTop <= topOffset && section.offsetTop + section.offsetHeight > topOffset) {
         link.setAttribute('state', 'active')
         document.title = `${link.innerText} | David Abari`
       } else {
         link.setAttribute('state', 'inactive')
       }
-    })
-
+    }
   })
 
 const cursor = document.querySelector('.cursor')
