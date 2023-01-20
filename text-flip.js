@@ -2,8 +2,8 @@ const flips = document.getElementsByClassName('flip')
 const count = flips.length
 
 const show = (num) => {
-  for (var i = 0; i < flips.length; i++) {
-    flips[i].classList.add("hide")
+  for (hobby of flips) {
+    hobby.classList.add("hide")
   }
   flips[num].classList.remove("hide")
 
